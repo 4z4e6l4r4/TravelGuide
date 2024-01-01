@@ -1,0 +1,82 @@
+﻿@model SeyahatRehberi.Models.BlogPosts
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_PanelLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BlogPosts</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <strong>Password:</strong>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Password)
+        </dd>
+
+        <dt>
+            <strong>Title:</strong>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            <strong>Content:</strong>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+
+        <dt>
+            <strong>Posted Date:</strong>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PostedDate)
+        </dd>
+
+        <dt>
+            <strong>Name:</strong>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            <strong>Description:</strong>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            <strong>Image:</strong>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            <strong>Is Status:</strong>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsStatus)
+        </dd>
+
+        <dt>
+            <strong>Is Delete:</strong>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsDelete)
+        </dd>
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
